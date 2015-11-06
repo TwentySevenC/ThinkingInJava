@@ -1,4 +1,4 @@
-package tasksCooperation;
+package concurrency.tasksCooperation;
 
 
 import java.io.IOException;

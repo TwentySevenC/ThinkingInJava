@@ -1,4 +1,4 @@
-package shareLimitedResource;
+package concurrency.shareLimitedResource;
 
 //: SynchronizedEvenGenerator.java
 

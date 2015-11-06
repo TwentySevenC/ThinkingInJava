@@ -1,4 +1,4 @@
-package stopTask;
+package concurrency.stopTask;
 
 import java.util.concurrent.TimeUnit;
 

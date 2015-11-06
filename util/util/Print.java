@@ -1,4 +1,4 @@
-package util;
+package util.util;
 
 public class Print {
 	public static void print(Object s){

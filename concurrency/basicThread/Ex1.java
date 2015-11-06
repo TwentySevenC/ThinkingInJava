@@ -1,4 +1,4 @@
-package basicThread;
+package concurrency.basicThread;
 
 //: concurrency/Ex1.jav
 /**

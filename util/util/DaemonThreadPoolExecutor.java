@@ -1,4 +1,4 @@
-package util;
+package util.util;
 
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;

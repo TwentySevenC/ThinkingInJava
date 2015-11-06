@@ -1,10 +1,10 @@
-package tasksCooperation;
+package concurrency.tasksCooperation;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
-import basicThread.LiftOff;
+import concurrency.basicThread.LiftOff;
 
 //:concurrency/TestBlockingQueues.java
 

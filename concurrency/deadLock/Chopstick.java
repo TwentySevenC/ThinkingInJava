@@ -1,4 +1,4 @@
-package deadLock;
+package concurrency.deadLock;
 
 //: concurrency/Chopstick.java
 

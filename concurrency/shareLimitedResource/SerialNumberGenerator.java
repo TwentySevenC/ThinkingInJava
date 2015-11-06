@@ -1,4 +1,4 @@
-package shareLimitedResource;
+package concurrency.shareLimitedResource;
 
 //:concurrency/SerialNumberGenerator.java
 //A serial number generator class 

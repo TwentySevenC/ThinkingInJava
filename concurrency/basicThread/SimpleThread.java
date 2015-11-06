@@ -1,4 +1,4 @@
-package basicThread;
+package concurrency.basicThread;
 
 //:concurrency/SimpleThread.java
 //Inheriting directly from a Thread class

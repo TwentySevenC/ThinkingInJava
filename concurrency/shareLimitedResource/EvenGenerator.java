@@ -1,4 +1,4 @@
-package shareLimitedResource;
+package concurrency.shareLimitedResource;
 
 public class EvenGenerator extends IntGenerator{
 	private int val = 0;

@@ -1,4 +1,4 @@
-package basicThread;
+package concurrency.basicThread;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.concurrent.ExecutorService;

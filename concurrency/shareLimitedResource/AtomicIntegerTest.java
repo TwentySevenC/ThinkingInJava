@@ -1,4 +1,4 @@
-package shareLimitedResource;
+package concurrency.shareLimitedResource;
 
 import java.util.Timer;
 import java.util.TimerTask;

@@ -1,4 +1,4 @@
-package stopTask;
+package concurrency.stopTask;
 
 import java.io.IOException;
 import java.io.InputStream;

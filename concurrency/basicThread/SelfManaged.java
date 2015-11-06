@@ -1,4 +1,4 @@
-package basicThread;
+package concurrency.basicThread;
 
 
 public class SelfManaged implements Runnable {

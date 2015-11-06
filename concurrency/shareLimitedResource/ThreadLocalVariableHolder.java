@@ -1,4 +1,4 @@
-package shareLimitedResource;
+package concurrency.shareLimitedResource;
 
 import java.util.Random;
 import java.util.concurrent.ExecutorService;

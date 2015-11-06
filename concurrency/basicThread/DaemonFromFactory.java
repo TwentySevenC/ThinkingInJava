@@ -1,10 +1,10 @@
-package basicThread;
+package concurrency.basicThread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import util.DaemonThreadFactory;
+import util.util.DaemonThreadFactory;
 
 public class DaemonFromFactory implements Runnable{
 

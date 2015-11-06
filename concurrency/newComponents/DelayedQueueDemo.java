@@ -1,4 +1,4 @@
-package newComponents;
+package concurrency.newComponents;
 
 import java.util.List;
 import java.util.Random;

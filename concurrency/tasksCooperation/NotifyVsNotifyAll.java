@@ -1,4 +1,4 @@
-package tasksCooperation;
+package concurrency.tasksCooperation;
 
 import java.util.Timer;
 import java.util.TimerTask;

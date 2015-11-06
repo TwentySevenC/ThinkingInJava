@@ -1,4 +1,4 @@
-package basicThread;
+package concurrency.basicThread;
 
 //:concurrency/LiftOff.java
 //Demonstration of the Runnable interface
