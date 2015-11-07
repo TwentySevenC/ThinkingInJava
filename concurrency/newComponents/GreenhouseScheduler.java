@@ -11,7 +11,9 @@ import java.util.concurrent.TimeUnit;
 
 
 public class GreenhouseScheduler {
+	@SuppressWarnings("unused")
 	private volatile boolean light = false;
+	@SuppressWarnings("unused")
 	private volatile boolean water = false;
 	private String thermostat = "Day";
 	
@@ -139,6 +141,10 @@ public class GreenhouseScheduler {
 	private int tempDerection = 1;
 	private int humidityDerection = 1;
 	private Calendar lastTime = Calendar.getInstance();
+	{
+		lastTime.set(Calendar.MINUTE, 30);
+		lastTime.set(Calendar.SECOND, 00);
+	}
 	
 	
 	class SaveData implements Runnable{
@@ -146,16 +152,23 @@ public class GreenhouseScheduler {
 
 		@Override
 		public void run() {
-			if(random.nextInt(4) == 3){
-				tempDerection = -1 * tempDerection;
+			synchronized (GreenhouseScheduler.this) {
+				lastTime.set(Calendar.MINUTE, lastTime.get(Calendar.MILLISECOND) + 30);
+				
+				if(random.nextInt(4) == 3){
+					tempDerection = -1 * tempDerection;
+				}
+				
+				lastTemp = lastTemp +  tempDerection * (1.0f + random.nextFloat());
+				
+				if(random.nextInt(4) == 2){
+					humidityDerection = -1 * tempDerection;
+				}
+				
+				lastHumidity = lastHumidity + humidityDerection * random.nextFloat();
+				datas.add(new DataPoint(lastTemp, lastHumidity, (Calendar)lastTime.clone()));
 			}
-			lastTemp = lastTemp + tempDerection * (1.0f + random.nextFloat());
 			
-			if(random.nextInt(4) == 3){
-				humidityDerection = -1 * tempDerection;
-			}
-			lastHumidity = lastHumidity + humidityDerection * random.nextFloat();
-			datas.add(new DataPoint(lastTemp, lastHumidity, lastTime));
 		}
 		
 	}
