@@ -19,18 +19,34 @@ public class Pool<T> {
 		this.semaphore = new Semaphore(size, true);
 	}
 	
-	public synchronized T getItem(){
+	public  T checkout() throws InterruptedException{
+		semaphore.acquire();
+		return getItem();
+	}
+	
+	public void checkin(T item){
+		if(releaseItem(item))
+			semaphore.release();
+	}
+	
+	
+	private synchronized T getItem(){
 		for(int i = 0; i < size; i++){
-			if(!checkedout[i])
+			if(!checkedout[i]){
+				checkedout[i] = true;
 				return items.get(i);
+			}
 		}
 		return null;
 	}
 	
-	public synchronized boolean releaseItem(T item){
+	private synchronized boolean releaseItem(T item){
 		int index = items.indexOf(item);
 		if(index == -1) return false;   
-		
+		if(checkedout[index]){
+			checkedout[index] = false;
+			return true;
+		}
 		return false;
 	}
 	
