@@ -99,7 +99,7 @@ class Customer2 implements Runnable{
 				//Blocks until course has been delivered.
 				System.out.println(this + " eating " + placeSetting.take());
 			}catch(InterruptedException e){
-				System.out.println(this + " waiting for " + course + "interrupted.");
+				System.out.println(this + " waiting for " + course + " interrupted.");
 				break;
 			}
 		}
