@@ -60,8 +60,7 @@ public abstract class ContainerPerformanceTester<C> {
 		try {
 			endLatch.await();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Run test interrupted.");
 		}
 		
 		System.out.printf("%-30s %20d %20d\n", testId, readTime, writeTime);
@@ -72,7 +71,7 @@ public abstract class ContainerPerformanceTester<C> {
 	}
 	
 	abstract class TestTask implements Runnable{
-		long duration = 0;
+		long duration = 0;    ////
 		
 		abstract void test();
 		abstract void putResult();
