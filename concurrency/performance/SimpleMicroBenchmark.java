@@ -5,6 +5,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 //: concurrency/SimpleMicroBenchmark.java
 
+//The dangers of microBenchMarking. 微基准测试
+
 abstract class Increamtable{
 	protected long counter = 0;
 	abstract void increament();
