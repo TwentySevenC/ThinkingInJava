@@ -29,18 +29,17 @@ public class RandomGenerator {
 
 		@Override
 		public java.lang.Character next() {
-			throw new UnsupportedOperationException();
+			return CountingGenerator.chars[r.nextInt(CountingGenerator.chars.length)];
 		}
 		
 	}
 	
-	public static class String implements Generator<java.lang.String>{
-
-		@Override
-		public java.lang.String next() {
-			throw new UnsupportedOperationException();
+	public static class String extends CountingGenerator.String{
+		{cg = new Character();}
+		public String(){}
+		public String(int length){
+			super(length);
 		}
-		
 	}
 	
 	
