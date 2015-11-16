@@ -17,9 +17,13 @@ public class SpringDetector {
 		
 		System.out.println(map);
 		
-		Groundhog hog = new Groundhog(3);
+		Groundhog hog = ghog.newInstance(3);  //
+		
 		System.out.println("Looking up the prediction: " + hog);
-		System.out.println(map.containsKey(hog));
+		if(map.containsKey(hog))
+			System.out.println(map.get(hog));
+		else
+			System.out.println("Key not found: " + hog);
 	}
 	
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {

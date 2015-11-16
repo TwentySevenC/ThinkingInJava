@@ -217,6 +217,8 @@ public class Countries {
 			return entries;
 		}
 		
+	}
+		
 		static Map<String, String> selection(final int size){
 			return new FlyWeightMap(){
 				public Set<java.util.Map.Entry<String, String>> entrySet(){
@@ -225,8 +227,8 @@ public class Countries {
 			};
 		}
 		
+		
 		static Map<String, String> map = new FlyWeightMap();
-		@SuppressWarnings("unused")
 		public static Map<String, String> capitals(){
 			return map;
 		}
@@ -236,7 +238,6 @@ public class Countries {
 		
 		
 		static List<String> names = new ArrayList<String>(map.keySet());
-		@SuppressWarnings("unused")
 		public static List<String> names() {
 			return names;
 		}
@@ -244,11 +245,11 @@ public class Countries {
 		public static List<String> names(int size){
 			return new ArrayList<String>(selection(size).keySet());
 		}
-	}
+	
 	
 	public static void main(String[] args) {
-		System.out.println(FlyWeightMap.capitals(10));
-		System.out.println(FlyWeightMap.names(10));
+		System.out.println(Countries.capitals(10));
+		System.out.println(Countries.names(10));
 	}
 	
 }
