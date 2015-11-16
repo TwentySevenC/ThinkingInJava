@@ -226,6 +226,7 @@ public class Countries {
 		}
 		
 		static Map<String, String> map = new FlyWeightMap();
+		@SuppressWarnings("unused")
 		public static Map<String, String> capitals(){
 			return map;
 		}
@@ -235,6 +236,7 @@ public class Countries {
 		
 		
 		static List<String> names = new ArrayList<String>(map.keySet());
+		@SuppressWarnings("unused")
 		public static List<String> names() {
 			return names;
 		}
