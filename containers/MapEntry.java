@@ -39,8 +39,14 @@ public class MapEntry<K, V> implements Map.Entry<K, V>{
 	};
 
 	@Override
-	public V setValue(V value) {
-		throw new UnsupportedOperationException();
+	public V setValue(V val) {
+		V result = value;
+		value = val;
+		return result;
+	}
+	
+	public String toString(){
+		return key + " = " + value;
 	}
 	
 }
