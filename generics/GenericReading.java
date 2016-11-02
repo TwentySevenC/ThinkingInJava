@@ -25,9 +25,30 @@ public class GenericReading {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	static void f2() {
 		Reader<Fruit> fruitReader = new Reader<>();
 		Fruit f = fruitReader.readExact(fruit);
 //		fruitReader.readExact(apples);
 	}
+	
+	static class ConvariantReader<T> {
+		T readExact(List<? extends T> list) {
+			return list.get(0);
+		}
+	}
+	
+	@SuppressWarnings("unused")
+	static void f3() {
+		ConvariantReader<Fruit> convariantReader = new ConvariantReader<>();
+		Fruit f = convariantReader.readExact(apples);
+		f = convariantReader.readExact(fruit);
+	}
+	
+	public static void main(String[] args) {
+		f1();
+		f2();
+		f3();
+	}
+	
 }
